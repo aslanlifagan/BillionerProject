@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hU9-Sh-Jce">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="h5A-fP-i7f">
-                                <rect key="frame" x="24" y="110.99999999999997" width="382" height="489.33333333333326"/>
+                                <rect key="frame" x="24" y="154.99999999999997" width="382" height="489.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Eb-sW-hFU">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="43"/>
@@ -73,18 +73,19 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="C5O-Vc-4TP" secondAttribute="bottom" constant="32" id="wew-AO-ocL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="xi0-Ya-3Ij"/>
                     <connections>
                         <outlet property="submitButton" destination="C5O-Vc-4TP" id="CFd-QM-9rC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21" y="5"/>
+            <point key="canvasLocation" x="919.53488372093022" y="4.5064377682403434"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Controller-->
         <scene sceneID="PBF-IE-jGm">
             <objects>
-                <viewController id="T2c-j8-pnR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T2c-j8-pnR" customClass="RegisterController" customModule="BillionerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cIB-bh-qgP">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,8 +142,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TDs-lm-EQl" userLabel="TextFieldStack">
-                                <rect key="frame" x="24" y="178" width="382" height="436"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="TDs-lm-EQl" userLabel="TextFieldStack">
+                                <rect key="frame" x="24" y="178" width="382" height="472"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mi1-as-uSL" userLabel="TextFieldView">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="109"/>
@@ -157,7 +158,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your surname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iBc-Pu-7yB">
-                                                        <rect key="frame" x="0.0" y="61" width="155" height="48"/>
+                                                        <rect key="frame" x="0.0" y="61" width="382" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="s5V-0b-o7h"/>
                                                         </constraints>
@@ -165,6 +166,10 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="iBc-Pu-7yB" firstAttribute="leading" secondItem="vlp-UI-ynG" secondAttribute="leading" id="QGG-0w-eXI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="iBc-Pu-7yB" secondAttribute="trailing" id="o8f-N2-qp2"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -176,7 +181,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFk-WJ-WGL" userLabel="TextFieldView">
-                                        <rect key="frame" x="0.0" y="109" width="382" height="109"/>
+                                        <rect key="frame" x="0.0" y="121" width="382" height="109"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="azf-Qz-2Jk">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="109"/>
@@ -188,7 +193,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="24E-hc-DKC">
-                                                        <rect key="frame" x="0.0" y="61" width="134.33333333333334" height="48"/>
+                                                        <rect key="frame" x="0.0" y="61" width="382" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="Nfz-53-qMJ"/>
                                                         </constraints>
@@ -196,6 +201,10 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="24E-hc-DKC" firstAttribute="leading" secondItem="azf-Qz-2Jk" secondAttribute="leading" id="9Ma-Dk-DTY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="24E-hc-DKC" secondAttribute="trailing" id="DDn-d8-CEK"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -207,7 +216,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ans-EA-NRW" userLabel="TextFieldView">
-                                        <rect key="frame" x="0.0" y="218" width="382" height="109"/>
+                                        <rect key="frame" x="0.0" y="242" width="382" height="109"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="jsV-XI-9dn">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="109"/>
@@ -219,7 +228,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OyA-Yp-7RZ">
-                                                        <rect key="frame" x="0.0" y="61" width="125.33333333333333" height="48"/>
+                                                        <rect key="frame" x="0.0" y="61" width="382" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="NxB-rD-7v1"/>
                                                         </constraints>
@@ -227,6 +236,10 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="OyA-Yp-7RZ" firstAttribute="leading" secondItem="jsV-XI-9dn" secondAttribute="leading" id="UNv-Lc-wKv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="OyA-Yp-7RZ" secondAttribute="trailing" id="dJu-O4-mkI"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -238,7 +251,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gn8-zd-jg3" userLabel="TextFieldView">
-                                        <rect key="frame" x="0.0" y="327" width="382" height="109"/>
+                                        <rect key="frame" x="0.0" y="363" width="382" height="109"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AHU-Un-TRi">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="109"/>
@@ -250,7 +263,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PmN-OZ-lqW">
-                                                        <rect key="frame" x="0.0" y="61" width="161" height="48"/>
+                                                        <rect key="frame" x="0.0" y="61" width="382" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="9Hc-na-q5v"/>
                                                         </constraints>
@@ -258,6 +271,10 @@
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="PmN-OZ-lqW" firstAttribute="leading" secondItem="AHU-Un-TRi" secondAttribute="leading" id="cry-9m-GDI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="PmN-OZ-lqW" secondAttribute="trailing" id="wT7-is-pey"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -289,10 +306,36 @@
                             <constraint firstItem="TDs-lm-EQl" firstAttribute="leading" secondItem="hHD-hI-AEU" secondAttribute="leading" constant="24" id="yJX-iS-wcm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="y6y-ki-UyY" id="oHF-JF-Mb0"/>
+                        <outlet property="mailField" destination="OyA-Yp-7RZ" id="64J-dB-Q6a"/>
+                        <outlet property="nameField" destination="24E-hc-DKC" id="B3P-9g-0RU"/>
+                        <outlet property="passwordField" destination="PmN-OZ-lqW" id="dLp-6X-4M6"/>
+                        <outlet property="signUpButton" destination="AS7-Fu-nVY" id="7lD-sP-PQH"/>
+                        <outlet property="surnameField" destination="iBc-Pu-7yB" id="YOs-LS-5h8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXC-6m-k0X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874.88372093023258" y="-5.1502145922746783"/>
+            <point key="canvasLocation" x="1773.4883720930231" y="-5.1502145922746783"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="caF-MM-eYk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hU9-Sh-Jce" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zVV-57-KUP">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="M3j-RH-kMv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6B-7H-M0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.930232558139533" y="4.5064377682403434"/>
         </scene>
     </scenes>
     <resources>
