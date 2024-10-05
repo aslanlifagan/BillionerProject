@@ -23,15 +23,15 @@ final class GetStartedController: UIViewController {
     }
     @objc
     fileprivate func submitButtonClicked() {
-        showRegisterController()
+        showLoginController()
     }
     
-    fileprivate func showRegisterController() {
+    fileprivate func showLoginController() {
         let vc = UIStoryboard
             .init(
                 name: "Auth",
                 bundle: nil
-            ).instantiateViewController(withIdentifier: "RegisterController") as? RegisterController ?? RegisterController()
+            ).instantiateViewController(withIdentifier: "LoginController") as? LoginController ?? LoginController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }

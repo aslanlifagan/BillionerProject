@@ -36,7 +36,7 @@ final class RegisterController: UIViewController {
     }
     @objc
     fileprivate func loginButtonClicked() {
-        print(#function)
+        navigationController?.popViewController(animated: true)
     }
 }
 
