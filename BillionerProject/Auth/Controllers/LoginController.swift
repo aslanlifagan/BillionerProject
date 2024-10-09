@@ -36,6 +36,7 @@ final class LoginController: UIViewController {
     @objc
     fileprivate func signInButtonClicked() {
         print(#function)
+        showMain()
     }
     
     fileprivate func configureTextField() {
@@ -55,6 +56,9 @@ final class LoginController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    fileprivate func showMain() {
+        //TODO: Homework
+    }
     fileprivate func configureField(user: User) {
         mailField.text = user.email
         passwordField.text = user.password
