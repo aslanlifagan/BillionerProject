@@ -6,6 +6,10 @@
 //
 
 import UIKit
+
+protocol RegisterControllerDelegate: AnyObject {
+    func didFinish(user: User)
+}
 final class RegisterController: UIViewController {
     
     @IBOutlet private weak var signUpButton: UIButton!
@@ -14,6 +18,8 @@ final class RegisterController: UIViewController {
     @IBOutlet private weak var surnameField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
     @IBOutlet private weak var mailField: UITextField!
+    private var user: User?
+    weak var delegate: RegisterControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -32,8 +38,31 @@ final class RegisterController: UIViewController {
     
     @objc
     fileprivate func signUpButtonClicked() {
-        print(#function)
+        guard checkValidation() else {
+            print(#function, "fieldler bosh ola bilmez")
+            return
+        }
+        guard let name = nameField.text,
+              let surname = surnameField.text,
+              let password = passwordField.text,
+              let mail = mailField.text else {return}
+        
+        user = User(name: name, surname: surname, email: mail, password: password)
+        guard let user = user else {return}
+        delegate?.didFinish(user: user)
+        navigationController?.popViewController(animated: true)
+        
     }
+    fileprivate func checkValidation() -> Bool {
+        guard let name = nameField.text,
+              let surname = surnameField.text,
+              let password = passwordField.text,
+              let mail = mailField.text
+        else {return false}
+        return !(name.isEmpty || surname.isEmpty || password.isEmpty || mail.isEmpty)
+    }
+    
+    
     @objc
     fileprivate func loginButtonClicked() {
         navigationController?.popViewController(animated: true)

@@ -48,8 +48,16 @@ final class LoginController: UIViewController {
             .init(
                 name: "Auth",
                 bundle: nil
-            ).instantiateViewController(withIdentifier: "RegisterController") as? RegisterController ?? RegisterController()
+            ).instantiateViewController(
+                withIdentifier: "RegisterController"
+            ) as? RegisterController ?? RegisterController()
+        vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    fileprivate func configureField(user: User) {
+        mailField.text = user.email
+        passwordField.text = user.password
     }
 
 }
@@ -59,4 +67,10 @@ extension LoginController: UITextFieldDelegate {
         guard let text = textField.text else {return}
         print(#function, text)
     }
+}
+extension LoginController: RegisterControllerDelegate {
+    func didFinish(user: User) {
+        configureField(user: user)
+    }
+    
 }
