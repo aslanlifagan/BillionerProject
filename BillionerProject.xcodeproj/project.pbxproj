@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820324912CBD5013001D3B6D /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820324902CBD5013001D3B6D /* UserDefaultsHelper.swift */; };
+		820324942CBD80FA001D3B6D /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820324932CBD80FA001D3B6D /* UserDefaultsKey.swift */; };
 		829591692CB1337000349C49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829591682CB1337000349C49 /* AppDelegate.swift */; };
 		8295916B2CB1337000349C49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8295916A2CB1337000349C49 /* SceneDelegate.swift */; };
 		8295916D2CB1337000349C49 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8295916C2CB1337000349C49 /* MainViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		820324902CBD5013001D3B6D /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		820324932CBD80FA001D3B6D /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		829591652CB1337000349C49 /* BillionerProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillionerProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		829591682CB1337000349C49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8295916A2CB1337000349C49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8203248F2CBD5000001D3B6D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				820324902CBD5013001D3B6D /* UserDefaultsHelper.swift */,
+				820324932CBD80FA001D3B6D /* UserDefaultsKey.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		8295915C2CB1337000349C49 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +96,7 @@
 				829591802CB1339D00349C49 /* App */,
 				8295917F2CB1339100349C49 /* Main */,
 				8295917E2CB1338C00349C49 /* Auth */,
+				8203248F2CBD5000001D3B6D /* Helpers */,
 				829591812CB133BE00349C49 /* Resources */,
 				829591762CB1337200349C49 /* Info.plist */,
 			);
@@ -268,10 +282,12 @@
 			files = (
 				829591872CB13A2200349C49 /* RegisterController.swift in Sources */,
 				8295918C2CB145EA00349C49 /* UserModel.swift in Sources */,
+				820324942CBD80FA001D3B6D /* UserDefaultsKey.swift in Sources */,
 				82F4B7842CB6DF1F001DDF93 /* QuestionHeaderView.swift in Sources */,
 				82F4B7802CB6DEE6001DDF93 /* AnswerCollectionViewCell.swift in Sources */,
 				829591892CB141F700349C49 /* LoginController.swift in Sources */,
 				829591832CB134DD00349C49 /* GetStartedController.swift in Sources */,
+				820324912CBD5013001D3B6D /* UserDefaultsHelper.swift in Sources */,
 				8295916D2CB1337000349C49 /* MainViewController.swift in Sources */,
 				829591692CB1337000349C49 /* AppDelegate.swift in Sources */,
 				8295916B2CB1337000349C49 /* SceneDelegate.swift in Sources */,

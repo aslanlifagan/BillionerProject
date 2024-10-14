@@ -15,6 +15,8 @@ final class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+//        UserDefaultsHelper.setInteger(key: "LoginType", value: 1)
+//        UserDefaultsHelper.setInteger(key: UserDefaultsKey.loginType.rawValue, value: 1)
     }
     fileprivate func configureUI() {
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -57,7 +59,9 @@ final class LoginController: UIViewController {
     }
     
     fileprivate func showMain() {
-        //TODO: Homework
+        if let scene = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+            scene.switchToMain()
+        }
     }
     fileprivate func configureField(user: User) {
         mailField.text = user.email
